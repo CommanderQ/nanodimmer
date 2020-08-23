@@ -612,68 +612,6 @@ def configuration_model()
         <Item label="Always on" value="1" />
         <Item label="Always off" value="2" />
     </Value>
-    <Value type="list" byteSize="4" index="21" label="WallSwipe: Infrared Sensor" min="0" max="16843009" value="16843009" setting_type="zwave" fw="">
-        <Help>
-            Enable the infrared sensor and configure its behavior
-        </Help>
-        <Item label="Disabled" value="65793" />
-        <Item label="Enabled (Dimming and Scene)" value="16777473" />
-        <Item label="Enabled (Scene)" value="16843009" />
-    </Value>
-    <Value type="byte" byteSize="4" index="64" label="WallSwipe: Button Color" min="0" max="1677721599" value="184549375" setting_type="zwave" fw="">
-        <Help>
-            Represented as an integer of byte values:
-            1 - Brightness: 0x00 - 0x63
-            2 - Red: 0x00 - 0xFF
-            3 - Green: 0x00 - 0xFF
-            4 - Blue: 0x00 - 0xFF
-        </Help>
-    </Value>
-    <Value type="byte" byteSize="4" index="65" label="WallSwipe: Gesture 'Up' Color" min="0" max="1677721599" value="855638015" setting_type="zwave" fw="">
-        <Help>
-            Represented as an integer of byte values:
-            1 - Brightness: 0x00 - 0x63
-            2 - Red: 0x00 - 0xFF
-            3 - Green: 0x00 - 0xFF
-            4 - Blue: 0x00 - 0xFF
-        </Help>
-    </Value>
-    <Value type="byte" byteSize="4" index="66" label="WallSwipe: Gesture 'Down' Color" min="0" max="1677721599" value="855638015" setting_type="zwave" fw="">
-        <Help>
-            Represented as an integer of byte values:
-            1 - Brightness: 0x00 - 0x63
-            2 - Red: 0x00 - 0xFF
-            3 - Green: 0x00 - 0xFF
-            4 - Blue: 0x00 - 0xFF
-        </Help>
-    </Value>
-    <Value type="byte" byteSize="4" index="67" label="WallSwipe: Gesture 'Left' Color" min="0" max="1677721599" value="855638015" setting_type="zwave" fw="">
-        <Help>
-            Represented as an integer of byte values:
-            1 - Brightness: 0x00 - 0x63
-            2 - Red: 0x00 - 0xFF
-            3 - Green: 0x00 - 0xFF
-            4 - Blue: 0x00 - 0xFF
-        </Help>
-    </Value>
-    <Value type="byte" byteSize="4" index="68" label="WallSwipe: Gesture 'Right' Color" min="0" max="1677721599" value="855638015" setting_type="zwave" fw="">
-        <Help>
-            Represented as an integer of byte values:
-            1 - Brightness: 0x00 - 0x63
-            2 - Red: 0x00 - 0xFF
-            3 - Green: 0x00 - 0xFF
-            4 - Blue: 0x00 - 0xFF
-        </Help>
-    </Value>
-    <Value type="byte" byteSize="4" index="69" label="WallSwipe: Night Light Color" min="0" max="1677721599" value="184549375" setting_type="zwave" fw="">
-        <Help>
-            Represented as an integer of byte values:
-            1 - Brightness: 0x00 - 0x63
-            2 - Red: 0x00 - 0xFF
-            3 - Green: 0x00 - 0xFF
-            4 - Blue: 0x00 - 0xFF
-        </Help>
-    </Value>
     <Value type="list" byteSize="1" index="80" label="Instant Updates" min="0" max="4" value="3" setting_type="zwave" fw="">
         <Help>
             Type of report sent to association group 1 when dimmer changes. Used to instantly update dimmer status on gateway
@@ -849,6 +787,68 @@ def configuration_model()
         <Item label="Disabled" value="0" />
         <Item label="Detected only first time power is restored to dimmer" value="1" />
         <Item label="Always detected when power is restored to dimmer" value="2" />
+    </Value>
+    <Value type="list" byteSize="4" index="21" label="WallSwipe: Swipe Mode" min="0" max="16843009" value="16843009" setting_type="zwave" fw="">
+        <Help>
+            Enable the infrared sensor and configure its behavior
+        </Help>
+        <Item label="Disabled" value="65793" />
+        <Item label="Enabled (Dimming and Scene)" value="16777473" />
+        <Item label="Enabled (Scene)" value="16843009" />
+    </Value>
+    <Value type="byte" byteSize="4" index="64" label="WallSwipe: Button Color" min="0" max="1677721599" value="184549375" setting_type="zwave" fw="">
+        <Help>
+            Represented as an integer of byte values:
+            1 - Brightness: 0x00 - 0x63
+            2 - Red: 0x00 - 0xFF
+            3 - Green: 0x00 - 0xFF
+            4 - Blue: 0x00 - 0xFF
+        </Help>
+    </Value>
+    <Value type="byte" byteSize="4" index="65" label="WallSwipe: Gesture 'Up' Color" min="0" max="1677721599" value="855638015" setting_type="zwave" fw="">
+        <Help>
+            Represented as an integer of byte values:
+            1 - Brightness: 0x00 - 0x63
+            2 - Red: 0x00 - 0xFF
+            3 - Green: 0x00 - 0xFF
+            4 - Blue: 0x00 - 0xFF
+        </Help>
+    </Value>
+    <Value type="byte" byteSize="4" index="66" label="WallSwipe: Gesture 'Down' Color" min="0" max="1677721599" value="855638015" setting_type="zwave" fw="">
+        <Help>
+            Represented as an integer of byte values:
+            1 - Brightness: 0x00 - 0x63
+            2 - Red: 0x00 - 0xFF
+            3 - Green: 0x00 - 0xFF
+            4 - Blue: 0x00 - 0xFF
+        </Help>
+    </Value>
+    <Value type="byte" byteSize="4" index="67" label="WallSwipe: Gesture 'Left' Color" min="0" max="1677721599" value="855638015" setting_type="zwave" fw="">
+        <Help>
+            Represented as an integer of byte values:
+            1 - Brightness: 0x00 - 0x63
+            2 - Red: 0x00 - 0xFF
+            3 - Green: 0x00 - 0xFF
+            4 - Blue: 0x00 - 0xFF
+        </Help>
+    </Value>
+    <Value type="byte" byteSize="4" index="68" label="WallSwipe: Gesture 'Right' Color" min="0" max="1677721599" value="855638015" setting_type="zwave" fw="">
+        <Help>
+            Represented as an integer of byte values:
+            1 - Brightness: 0x00 - 0x63
+            2 - Red: 0x00 - 0xFF
+            3 - Green: 0x00 - 0xFF
+            4 - Blue: 0x00 - 0xFF
+        </Help>
+    </Value>
+    <Value type="byte" byteSize="4" index="69" label="WallSwipe: Night Light Color" min="0" max="1677721599" value="184549375" setting_type="zwave" fw="">
+        <Help>
+            Represented as an integer of byte values:
+            1 - Brightness: 0x00 - 0x63
+            2 - Red: 0x00 - 0xFF
+            3 - Green: 0x00 - 0xFF
+            4 - Blue: 0x00 - 0xFF
+        </Help>
     </Value>
 </configuration>
 '''
