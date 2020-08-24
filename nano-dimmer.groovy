@@ -424,9 +424,9 @@ def update_settings_on_device()
         cmds << zwave.associationV1.associationGet(groupingIdentifier: 2)
     }
 
-    configuration.Value.each
-    {
-        if ("${it.@setting_type}" == "zwave") {
+    configuration.Value
+        .grep({ "${it.@setting_type}" == "zwave" })
+        .each({
             if (cachedDeviceParameters."${it.@index}" == null)
             {
                 configureOpportunity = true
@@ -444,8 +444,7 @@ def update_settings_on_device()
                 cmds << zwave.configurationV1.configurationSet(configurationValue: integer2Cmd(convertedConfigurationValue, it.@byteSize.toInteger()), parameterNumber: it.@index.toInteger(), size: it.@byteSize.toInteger())
                 cmds << zwave.configurationV1.configurationGet(parameterNumber: it.@index.toInteger())
             }
-        }
-    }
+        })
 
     setConfigureOpportunity(configureOpportunity)
     return cmds
